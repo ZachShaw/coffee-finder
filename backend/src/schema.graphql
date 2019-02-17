@@ -4,9 +4,14 @@ type Mutation {
 
 type Query {
   user: User
+  googlePlaceWithId(id: String!): GooglePlace
 }
 
 type User {
   id: ID!
   name: String!
+}
+
+type GooglePlace {
+  payload: String!
 }
