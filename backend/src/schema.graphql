@@ -4,12 +4,15 @@ type Mutation {
 
 type Query {
   user: User
-  googlePlaceWithId(id: String!): GooglePlace
+  placeWithId(id: String!): GooglePlace
+  placesWithAddress(address: String!): GooglePlace
+  placesWithGeocode(lat: String!, long: String!): GooglePlace
 }
 
 type User {
   id: ID!
   name: String!
+  email: String
 }
 
 type GooglePlace {
